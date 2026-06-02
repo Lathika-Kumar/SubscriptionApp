@@ -1,0 +1,184 @@
+/* Platform Card Styles */
+.platform-card {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.platform-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(229, 9, 20, 0.3), 0 0 20px rgba(229, 9, 20, 0.2);
+}
+
+.platform-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.platform-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+  filter: brightness(0.9);
+}
+
+.platform-card:hover .platform-banner img {
+  transform: scale(1.15) rotate(2deg);
+  filter: brightness(1.1);
+}
+
+.platform-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.platform-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.platform-name {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.platform-tagline {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.platform-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.platform-cta {
+  margin-top: auto;
+}
+
+.explore-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, var(--primary-color), #ff1a1a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.explore-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-base), height var(--transition-base);
+  pointer-events: none;
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+}
+
+.explore-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.3);
+}
+
+/* Grid Layout */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 1024px) {
+  .platforms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .platforms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .platform-card-body {
+    padding: 1rem;
+  }
+
+  .platform-banner {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platforms-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .platform-banner {
+    height: 150px;
+  }
+
+  .platform-name {
+    font-size: 1.1rem;
+  }
+}

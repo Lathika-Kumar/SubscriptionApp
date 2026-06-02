@@ -1,0 +1,348 @@
+/* Platform Details Page Styles */
+.platform-page {
+  width: 100%;
+}
+
+.platform-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, var(--secondary-color), var(--background));
+  overflow: hidden;
+  margin-top: -120px;
+  padding-top: 120px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(10, 14, 39, 0.95)
+  );
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.back-btn {
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-base);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: white;
+  transform: translateX(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.banner-text p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.platform-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Plans Section */
+.plans-section {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.8), rgba(34, 31, 31, 0.8));
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-base);
+}
+
+.plans-section .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.plans-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plan-item {
+  background: linear-gradient(135deg, rgba(10, 14, 39, 0.8), rgba(26, 31, 58, 0.8));
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  transition: left var(--transition-base);
+  pointer-events: none;
+}
+
+.plan-item:hover::before {
+  left: 100%;
+}
+
+.plan-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(229, 9, 20, 0.3), 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.plan-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.plan-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.plan-features {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.feature-tag {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.add-plan-btn {
+  background: linear-gradient(135deg, var(--primary-color), #ff1a1a);
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-plan-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-base), height var(--transition-base);
+}
+
+.add-plan-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+}
+
+.add-plan-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.add-plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.view-all-plans {
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-plans:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Movies Section */
+.movies-section {
+  padding: 2rem 0;
+}
+
+.movies-section .section-header {
+  margin-bottom: 2rem;
+}
+
+.genres-container {
+  width: 100%;
+}
+
+.no-movies {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  color: var(--text-secondary);
+}
+
+/* Error Container */
+.error-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.error-container h2 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.error-container button {
+  padding: 0.75rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .platform-banner {
+    height: 200px;
+    padding-top: 100px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .platform-content {
+    padding: 2rem 1rem;
+  }
+
+  .plans-section {
+    padding: 1.5rem;
+  }
+
+  .plans-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-banner {
+    height: 150px;
+    padding-top: 80px;
+    margin-top: -80px;
+  }
+
+  .banner-content {
+    padding: 1rem;
+  }
+
+  .banner-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+
+  .platform-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .plans-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}

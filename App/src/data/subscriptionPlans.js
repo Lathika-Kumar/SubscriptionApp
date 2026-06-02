@@ -1,0 +1,198 @@
+const subscriptionPlans = [
+  {
+    id: 'netflix-basic',
+    platformId: 'netflix',
+    name: 'Basic',
+    price: 199,
+    duration: 'month',
+    features: ['480p Quality', 'Single Screen', '1 Profile'],
+    badge: 'Standard',
+  },
+  {
+    id: 'netflix-standard',
+    platformId: 'netflix',
+    name: 'Standard',
+    price: 499,
+    duration: 'month',
+    features: ['1080p Quality', '2 Screens', '2 Profiles'],
+    badge: 'Popular',
+  },
+  {
+    id: 'netflix-premium',
+    platformId: 'netflix',
+    name: 'Premium',
+    price: 649,
+    duration: 'month',
+    features: ['4K Quality', '4 Screens', '4 Profiles', 'Offline Download'],
+    badge: 'Best',
+  },
+
+  {
+    id: 'prime-monthly',
+    platformId: 'primevideo',
+    name: 'Monthly',
+    price: 149,
+    duration: 'month',
+    features: ['Full Access', 'HD Streaming', 'Ad-Free'],
+    badge: 'Good',
+  },
+  {
+    id: 'prime-annual',
+    platformId: 'primevideo',
+    name: 'Annual',
+    price: 1299,
+    duration: 'year',
+    features: ['Full Access', 'HD Streaming', 'Ad-Free', 'Prime Benefits'],
+    badge: 'Best Value',
+  },
+
+  {
+    id: 'disney-annual',
+    platformId: 'disneyhotstar',
+    name: 'Annual',
+    price: 1499,
+    duration: 'year',
+    features: ['4K Quality', 'Live Sports', 'Disney+ Content', '4 Profiles'],
+    badge: 'Premium',
+  },
+  {
+    id: 'disney-monthly',
+    platformId: 'disneyhotstar',
+    name: 'Monthly',
+    price: 299,
+    duration: 'month',
+    features: ['HD Quality', 'Live Sports', 'Family Content'],
+    badge: 'Standard',
+  },
+
+  {
+    id: 'sonyliv-monthly',
+    platformId: 'sonyliv',
+    name: 'Monthly',
+    price: 199,
+    duration: 'month',
+    features: ['HD Quality', 'Live TV', 'Sports Coverage'],
+    badge: 'Good',
+  },
+
+  {
+    id: 'zee5-premium',
+    platformId: 'zee5',
+    name: 'Premium',
+    price: 299,
+    duration: 'month',
+    features: ['Ad-Free', 'Full Library', '2 Screens'],
+    badge: 'Standard',
+  },
+
+  {
+    id: 'crunchyroll-fan',
+    platformId: 'crunchyroll',
+    name: 'Fan',
+    price: 389,
+    duration: 'month',
+    features: ['Standard Quality', 'Limited Ads', 'Anime Library'],
+    badge: 'Basic',
+  },
+  {
+    id: 'crunchyroll-mega',
+    platformId: 'crunchyroll',
+    name: 'Mega Fan',
+    price: 599,
+    duration: 'month',
+    features: ['4K Quality', 'Ad-Free', 'Simulcasts', 'Manga'],
+    badge: 'Best',
+  },
+
+  {
+    id: 'spotify-premium',
+    platformId: 'spotify',
+    name: 'Premium',
+    price: 129,
+    duration: 'month',
+    features: ['Ad-Free', 'Offline Download', 'High Quality Audio'],
+    badge: 'Popular',
+  },
+
+  {
+    id: 'jiosaavn-annual',
+    platformId: 'jiosaavn',
+    name: 'Annual',
+    price: 999,
+    duration: 'year',
+    features: ['Ad-Free', 'Indian Music', 'Offline Download'],
+    badge: 'Best Value',
+  },
+
+  {
+    id: 'gaana-plus',
+    platformId: 'gaana',
+    name: 'Plus',
+    price: 99,
+    duration: 'month',
+    features: ['Ad-Free', 'High Quality', 'Offline'],
+    badge: 'Standard',
+  },
+
+  {
+    id: 'jiohotstar-sports',
+    platformId: 'jiohotstar',
+    name: 'Sports Pack',
+    price: 599,
+    duration: 'month',
+    features: ['Live Cricket', 'HD Streaming', 'Multi Sports'],
+    badge: 'Premium',
+  },
+
+  {
+    id: 'sunnxt-annual',
+    platformId: 'sunnxt',
+    name: 'Annual',
+    price: 299,
+    duration: 'year',
+    features: ['South Indian Content', 'HD Streaming', 'Full Library'],
+    badge: 'Best Value',
+  },
+
+  {
+    id: 'aha-monthly',
+    platformId: 'aha',
+    name: 'Monthly',
+    price: 99,
+    duration: 'month',
+    features: ['Telugu Content', 'Full Access', 'New Releases'],
+    badge: 'Standard',
+  },
+
+  {
+    id: 'hoichoi-annual',
+    platformId: 'hoichoi',
+    name: 'Annual',
+    price: 499,
+    duration: 'year',
+    features: ['Bengali Content', 'Ad-Free', 'Originals'],
+    badge: 'Best Value',
+  },
+
+  {
+    id: 'manoramamax-annual',
+    platformId: 'manoramamax',
+    name: 'Annual',
+    price: 399,
+    duration: 'year',
+    features: ['Malayalam Content', 'Live TV', 'Serials'],
+    badge: 'Best Value',
+  },
+
+  {
+    id: 'planetmarathi-annual',
+    platformId: 'planetmarathi',
+    name: 'Annual',
+    price: 299,
+    duration: 'year',
+    features: ['Marathi Content', 'Full Library', 'New Releases'],
+    badge: 'Best Value',
+  },
+];
+
+export default subscriptionPlans;

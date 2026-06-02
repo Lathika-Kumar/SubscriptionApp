@@ -1,0 +1,414 @@
+/* My Purchases Page Styles */
+.my-purchases {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.my-purchases .back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  background: var(--surface);
+  color: var(--accent);
+  border: 2px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.my-purchases .back-btn:hover {
+  border-color: var(--accent);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.purchases-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(229, 9, 20, 0.1),
+    rgba(0, 212, 255, 0.05)
+  );
+  border-radius: 12px;
+}
+
+.purchases-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.purchases-header p {
+  color: var(--text-secondary);
+}
+
+/* Empty State */
+.empty-purchases {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.5), rgba(34, 31, 31, 0.5));
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.empty-purchases h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-purchases p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.explore-btn {
+  padding: 0.9rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), #ff1a1a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-base), height var(--transition-base);
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+}
+
+.explore-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.purchases-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Orders Section */
+.orders-section,
+.subscriptions-section,
+.direct-purchases-section {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.orders-section h2,
+.subscriptions-section h2,
+.direct-purchases-section h2 {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.orders-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.order-id {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.order-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.order-items h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.order-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.order-item img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-title {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.item-meta {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.item-price {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.order-total {
+  text-align: right;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.order-total strong {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* Subscriptions List */
+.subscriptions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.subscription-card {
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.subscription-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.1);
+}
+
+.subscription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.subscription-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.status {
+  background: var(--success);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.subscription-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.subscription-details {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Purchases List */
+.purchases-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.purchase-card {
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.purchase-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.1);
+}
+
+.purchase-card img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.purchase-details {
+  flex: 1;
+}
+
+.purchase-details h4 {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+}
+
+.purchase-details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.purchase-price {
+  color: var(--accent);
+  font-weight: 700;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .my-purchases {
+    padding: 1.5rem;
+  }
+
+  .purchases-header {
+    padding: 1.5rem;
+  }
+
+  .purchases-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .orders-section,
+  .subscriptions-section,
+  .direct-purchases-section {
+    padding: 1.5rem;
+  }
+
+  .subscriptions-list,
+  .purchases-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .my-purchases {
+    padding: 1rem;
+  }
+
+  .purchases-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .subscriptions-list,
+  .purchases-list {
+    grid-template-columns: 1fr;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .purchase-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .purchase-card img {
+    width: 100px;
+    height: 130px;
+  }
+}
